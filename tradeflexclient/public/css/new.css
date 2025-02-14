@@ -1,3 +1,17 @@
+.custom-ton-button button {
+  background-color: #007bff !important; /* Custom background */
+  color: white !important; /* Custom text color */
+  border-radius: 8px !important; /* Rounded corners */
+  padding: 10px 20px !important; /* Adjust padding */
+  font-size: 16px !important; /* Adjust font size */
+  border: none !important; /* Remove default border */
+}
+
+.custom-ton-button button:hover {
+  background-color: #0056b3 !important; /* Hover effect */
+}
+
+
 iframe.goog-te-banner-frame {
   display: none !important;
 }
