@@ -1,7 +1,7 @@
 {
     "name": "TradeFlex",
     "url": "https://tradeflex.vercel.app/", 
-    "iconUrl": "/img/logo_2.png", 
+    "iconUrl": "../img/logo_2.png", 
     "termsOfUseUrl": "https://tradeflex.vercel.app/", 
     "privacyPolicyUrl": "https://tradeflex.vercel.app/"
   }
