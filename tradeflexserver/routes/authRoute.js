@@ -3,13 +3,13 @@ const router = express.Router();
 const cors = require("cors");
 
 const corsOptions = {
-    origin: 'https://tradeflex.vercel.app', 
+    origin: 'https://tradevister.vercel.app', 
     credentials: true,
     methods: 'GET,POST,PUT,DELETE,OPTIONS',
     allowedHeaders: 'Content-Type,Authorization',
   };
 
-  //https://tradevister.vercel.app
+  //http://localhost:5173
   
   router.use(cors(corsOptions));
   router.options('*', cors(corsOptions)); 
