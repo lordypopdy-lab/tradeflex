@@ -9,7 +9,7 @@ const corsOptions = {
     allowedHeaders: 'Content-Type,Authorization',
   };
 
-  //https://tradeflex.vercel.app
+  //http://localhost:5173
   
   router.use(cors(corsOptions));
   router.options('*', cors(corsOptions)); 
