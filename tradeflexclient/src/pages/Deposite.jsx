@@ -1,20 +1,51 @@
 import React from 'react'
 import toast from 'react-hot-toast'
 import MainNavBar from '../components/MainNavBar'
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { convertNanotonsToTon } from "../utils/convertNanotonsToTon";
 import { TonConnectButton, useTonConnectUI } from '@tonconnect/ui-react';
 
+
 const Deposite = () => {
+    const [amount, setAmount] = useState('');
+    const navigate = useNavigate();
+    
+    const [tonConnectUI] = useTonConnectUI();
+
+    const handleDeposit = async () => {
+        if (amount > 0) {
+
+            await tonConnectUI.sendTransaction({
+                validUntil: Date.now() + 5 * 60 * 1000, // 5 minutes
+                messages: [
+                    {
+                        address: "0QD-SuoCHsCL2pIZfE8IAKsjc0aDpDUQAoo-ALHl2mje04A-",
+                        amount: '5000000',
+                    }
+                ]
+            });
+            // console.log(`Depositing ${amount} TON...`);
+            // setTimeout(() => {
+            //     console.log("Success Deposit!");
+            //     navigate('#');
+            // }, 1000);
+        }
+    };
+
     const handleCopy = async (textToCopy) => {
         try {
             await navigator.clipboard.writeText(textToCopy);
             toast.success("Copied successfully!");
         } catch (err) {
-            toast.error("Failed to copy!")
+            toast.error("Failed to copy!");
         }
     };
+
     const walletConnect = async () => {
-        // toast.success("Wallet Connect Comming Soon!")
+        toast.success("Wallet Connect Coming Soon!");
     }
+
     return (
         <>
             <MainNavBar />
@@ -23,6 +54,24 @@ const Deposite = () => {
                     <div className="main-panel m-0 w-100">
                         <div className="content-wrapper">
                             <div className="row">
+                                <div className="p-4 max-w-md mx-auto text-center">
+                                    <div>
+                                        <h2 className="text-xl font-semibold">Enter Amount to Deposit</h2>
+                                        <input
+                                            type="number"
+                                            className="bg-transparent p-3 text-light border-0"
+                                            placeholder="Amount in TON"
+                                            value={amount}
+                                            onChange={(e) => setAmount(e.target.value)}
+                                        />
+                                        <button
+                                            className="btn btn-primary m-2 p-3"
+                                            onClick={handleDeposit}
+                                        >
+                                            Deposit
+                                        </button>
+                                    </div>
+                                </div>
                                 <div style={{ borderRadius: "0px" }} className="col-xl-6 p-2 col-sm-6">
                                     <button onClick={walletConnect} className='btn btn-secondary w-100'>
                                         <div style={{ marginLeft: "20%" }} className="custom-ton-button">
@@ -48,7 +97,6 @@ const Deposite = () => {
                                             <p className="card-description">USD | USDT Deposit Method</p><hr />
                                             <p className="card-description">Request other available Deposit Method</p>
                                             <p className="card-description"><span className="text-success">Once requested, you will receive the payment details via our support mail....Once payment</span> is made using this method you are to send your payment proof to our support mail support@hintsprimefx.com</p>
-
                                         </div>
                                     </div>
                                 </div>
@@ -58,7 +106,8 @@ const Deposite = () => {
                 </div>
             </div>
         </>
-    )
+    );
 }
 
-export default Deposite
+
+export default Deposite;
