@@ -1,4 +1,4 @@
 export const convertNanotonsToTon = (nanotons) => {
-    return nanotons / 1e9;
+    return nanotons * 1e9;
   };
   

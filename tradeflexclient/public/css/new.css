@@ -1,8 +1,15 @@
+.input-amount{
+  color: #c8ddf4;
+  padding: 9px;
+  border: 2px solid #c8ddf4;
+  background: transparent;
+}
+
 .custom-ton-button button {
   background-color: #007bff !important; /* Custom background */
   color: white !important; /* Custom text color */
   border-radius: 8px !important; /* Rounded corners */
-  padding: 10px 20px !important; /* Adjust padding */
+  padding: 10px 100px !important; /* Adjust padding */
   font-size: 16px !important; /* Adjust font size */
   border: none !important; /* Remove default border */
 }
