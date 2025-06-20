@@ -15,7 +15,7 @@ import { Toaster } from 'react-hot-toast';
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-axios.defaults.baseURL = 'https://tradeflexserver.vercel.app00';
+axios.defaults.baseURL = 'https://tradeflexserver.vercel.app';
 axios.defaults.withCredentials = true;
 
 //http://localhost:8080 
