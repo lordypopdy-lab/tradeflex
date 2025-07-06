@@ -12,10 +12,9 @@ import AdminLogin from "./admin/pages/AdminLogin";
 import AdminContact from "./admin/pages/AdminContact";
 import axios from 'axios';
 import { Toaster } from 'react-hot-toast';
-
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-axios.defaults.baseURL = 'https://tradeflexserver.vercel.app';
+axios.defaults.baseURL = 'https://tradeflexserver.vercel.app8';
 axios.defaults.withCredentials = true;
 
 //http://localhost:8080 
