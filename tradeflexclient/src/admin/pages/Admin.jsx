@@ -50,7 +50,7 @@ const Admin = () => {
         const email = Admin.email;
 
         if(email !== "examplelordy@gmail.com") {
-            localStorage.setItem("admin", "");
+            localStorage.removeItem("admin");
             location.href = "/login"
         }
 
