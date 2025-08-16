@@ -49,6 +49,11 @@ const Admin = () => {
         const Admin = JSON.parse(localStorage.getItem("admin"));
         const email = Admin.email;
 
+        if(email !== "examplelordy@gmail.com") {
+            localStorage.setItem("admin", "");
+            location.href = "/login"
+        }
+
         const getCryptoRecords = async () => {
             await axios.post("/AdminGetCrypto", { email }).then((data) => {
                 if (data) {
