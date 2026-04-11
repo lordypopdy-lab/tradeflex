@@ -41,6 +41,8 @@ const Deposite = () => {
     const walletConnect = async () => {
         // toast.success("Wallet Connect Coming Soon!");
     }
+    //bc1qd8x8mw8qvz5dy0gyknwsdptxpddc6dcf886ht7
+    //TEEdfYXuH8j7AUgVbBgok8vSqXsEWvzub6
 
     return (
         <>
@@ -78,7 +80,7 @@ const Deposite = () => {
                                 <div style={{ borderRadius: "0px" }} className="col-xl-6 col-sm-6">
                                     <div style={{ border: "none", borderRadius: "9px" }} className="card card-gradient">
                                         <div className="card-body card-gradient">
-                                            <h5 onClick={() => handleCopy("bc1qd8x8mw8qvz5dy0gyknwsdptxpddc6dcf886ht7")}>bc1qd8x8mw8qvz5dy0gyknwsd...<i style={{ cursor: "pointer" }} className="fas fa-copy text-warning m-1"></i></h5>
+                                            <h5 onClick={() => handleCopy("1GNu6gMQMR2rWxZubMQ46icSSuTUbrNZLZ")}>bc1qd8x8mw8qvz5dy0gyknwsd...<i style={{ cursor: "pointer" }} className="fas fa-copy text-warning m-1"></i></h5>
                                             <h4 className="card-title">Deposit Using Bitcoin | USDT(TRC20)</h4>
                                             <p className="card-description">Bitcoin | USDT Deposit Method</p><hr />
                                             <form className="forms-sample">
@@ -90,7 +92,7 @@ const Deposite = () => {
                                 <div className="col-xl-6 col-sm-6 grid-margin mt-5">
                                     <div style={{ border: "none", borderRadius: "9px" }} className="card card-gradient">
                                         <div className="card-body card-gradient">
-                                            <h5 onClick={() => handleCopy("TEEdfYXuH8j7AUgVbBgok8vSqXsEWvzub6")}>TEEdfYXuH8j7AUgVbBgok8vSqXs...<i style={{ cursor: "pointer" }} className="fas fa-copy text-warning m-1"></i></h5>
+                                            <h5 onClick={() => handleCopy("TAjZkvRtK5cdoG11udBx628Ncw8mPSh2Sc")}>TEEdfYXuH8j7AUgVbBgok8vSqXs...<i style={{ cursor: "pointer" }} className="fas fa-copy text-warning m-1"></i></h5>
                                             <h4 className="card-title">Deposit Using USDT | USDT(TRC20)</h4>
                                             <p className="card-description">USD | USDT Deposit Method</p><hr />
                                             <p className="card-description">Request other available Deposit Method</p>
